@@ -90,11 +90,16 @@ let package = Package(
             swiftSettings: [.enableUpcomingFeature("ExistentialAny")]
         ),
         .target(
-            name: "GeneratedOpenAIClient",
-            dependencies: [
-                .product(name: "SpeziKeychainStorage", package: "SpeziStorage")
-            ]
+          name: "GeneratedOpenAIClient",
+          dependencies: [
+            .product(name: "SpeziKeychainStorage", package: "SpeziStorage"),
+            .product(name: "Spezi", package: "Spezi"),
+            .product(name: "SpeziFoundation", package: "SpeziFoundation"),
+            .product(name: "SpeziOnboarding", package: "SpeziOnboarding"),
+            .target(name: "SpeziLLM")
+          ]
         ),
+
         .testTarget(
             name: "SpeziLLMTests",
             dependencies: [
