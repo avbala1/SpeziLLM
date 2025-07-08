@@ -58,7 +58,6 @@ let package = Package(
                 .product(name: "SpeziOnboarding", package: "SpeziOnboarding"),
                 .product(name: "SpeziViews", package: "SpeziViews"),
                 .target(name: "SpeziLLMLocal"),
-                .product(name: "MLXLLM", package: "mlx-swift-examples")
             ],
             swiftSettings: [.enableUpcomingFeature("ExistentialAny")]
         ),
