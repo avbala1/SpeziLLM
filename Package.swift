@@ -1,13 +1,5 @@
 // swift-tools-version:6.0
 
-//
-// This source file is part of the Stanford Spezi open source project
-//
-// SPDX-FileCopyrightText: 2022 Stanford University and the project authors (see CONTRIBUTORS.md)
-//
-// SPDX-License-Identifier: MIT
-//
-
 import PackageDescription
 
 let package = Package(
@@ -27,7 +19,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/ml-explore/mlx-swift", .upToNextMinor(from: "0.21.2")),
-        .package(url: "https://github.com/ml-explore/mlx-swift-examples", exact: "2.21.2"),  // Pin MLX Swift Examples as it doesn't follow semantic versioning
+        .package(url: "https://github.com/ml-explore/mlx-swift-examples", exact: "2.21.2"),
         .package(url: "https://github.com/huggingface/swift-transformers", .upToNextMinor(from: "0.1.14")),
         .package(url: "https://github.com/StanfordSpezi/Spezi", from: "1.8.0"),
         .package(url: "https://github.com/StanfordSpezi/SpeziFoundation", from: "2.1.0"),
@@ -35,7 +27,6 @@ let package = Package(
         .package(url: "https://github.com/StanfordSpezi/SpeziOnboarding", from: "1.2.2"),
         .package(url: "https://github.com/StanfordSpezi/SpeziChat", .upToNextMinor(from: "0.2.3")),
         .package(url: "https://github.com/StanfordSpezi/SpeziViews", from: "1.8.0"),
-        .package(url: "https://github.com/apple/swift-openapi-generator", from: "1.7.0"),
         .package(url: "https://github.com/apple/swift-openapi-runtime", from: "1.8.0"),
         .package(url: "https://github.com/apple/swift-openapi-urlsession", from: "1.0.2")
     ],
@@ -102,9 +93,6 @@ let package = Package(
             name: "GeneratedOpenAIClient",
             dependencies: [
                 .product(name: "SpeziKeychainStorage", package: "SpeziStorage")
-            ],
-            plugins: [
-                .plugin(name: "OpenAPIGenerator", package: "swift-openapi-generator")
             ]
         ),
         .testTarget(
