@@ -49,7 +49,6 @@ let package = Package(
                 .product(name: "MLX", package: "mlx-swift"),
                 .product(name: "MLXRandom", package: "mlx-swift"),
                 .product(name: "Transformers", package: "swift-transformers"),
-                .product(name: "MLXLLM", package: "mlx-swift-examples")
             ],
             swiftSettings: [.enableUpcomingFeature("ExistentialAny")]
         ),
